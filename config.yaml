@@ -1,0 +1,55 @@
+data_directory: /home/fibebocai/ReactiveProactive/Manna/Data/
+data_name: Ticket Details.xlsx
+processedData_directory : /home/fibebocai/ReactiveProactive/Manna/ProcessedData/
+processedData_name: processedData.xlsx
+stopword_directory: /home/fibebocai/ReactiveProactive/Manna/stopwords/
+stopword_file : extended_stopwords.csv
+model_directory: /home/fibebocai/ReactiveProactive/Manna/Models/
+model_name_lda: lda.pkl
+model_name_nmf : nmf.pkl
+data_process: /home/fibebocai/ReactiveProactive/Manna/APIs/
+data_process_name: Data_Processing.py
+lookup_path: /home/fibebocai/ReactiveProactive/Manna/spellCorrect/
+lookup_file: lookup.xlsx
+testresult_path: /home/fibebocai/ReactiveProactive/Manna/TestResult/
+
+
+##parameters
+lda:
+  num_topics : 20
+  num_words : 10
+  learning_decay : 0.9
+  alpha : 0.001
+  eta : default
+  learning_method : batch
+  batch_size : 512
+  learning_offset : 10
+  n_top_words : 10
+  epochs : 200
+  random_state : 50
+  ngram_min : 1
+  ngram_max : 3
+  max_df : 0.9
+  min_df : default
+  max_features : 10000
+  title_count : 36
+
+nmf:
+  num_topics : 20
+  num_words : 10
+  learning_decay : 0.9
+  alpha : 0.1
+  eta : default
+  learning_method : online
+  batch_size : 512
+  learning_offset : 5
+  n_top_words : 10
+  epochs : 200
+  random_state : 40
+  ngram_min : 1
+  ngram_max : 3
+  max_df : 0.9
+  min_df : default
+  max_features : 5000
+  title_count : 35
+
